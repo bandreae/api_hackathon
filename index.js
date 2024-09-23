@@ -2,12 +2,16 @@ const express = require('express')
 const app = express()
 const employees = require("./routes/employees")
 const salaries = require("./routes/salaries")
+const departments = require("./routes/departments")
+
 const database = require("./mysql/connection")
 
 const port = process.env.PORT || 4001;
 
 app.use(employees)
 app.use(salaries)
+app.use(departments)
+
 app.get(database)
 
 // app.get('/', (req, res) => {
