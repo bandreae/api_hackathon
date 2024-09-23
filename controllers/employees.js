@@ -35,7 +35,7 @@ const getEmployeesById = (req,res)=>{
 
 const getEmployeesByFirstName = (req,res)=>{
     const employeeFirstName = req.params.first_name;
-    let sql = "SELECT * FROM employees WHERE first_name = ?";
+    let sql = "SELECT * FROM employees WHERE first_name = ? LIMIT 20";
     const replacements = [employeeFirstName];
 
     pool.query(sql, replacements, (err,rows)=> {
