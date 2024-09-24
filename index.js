@@ -5,6 +5,7 @@ const salaries = require("./routes/salaries")
 const departments = require("./routes/departments")
 const titles = require("./routes/titles")
 const deptManagers = require("./routes/deptManagers")
+const deptEmployees = require("./routes/deptEmployees")
 
 const database = require("./mysql/connection")
 
@@ -15,6 +16,7 @@ app.use(salaries)
 app.use(departments)
 app.use(titles)
 app.use(deptManagers)
+app.use(deptEmployees)
 
 app.get(database)
 
