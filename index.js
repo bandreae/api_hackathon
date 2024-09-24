@@ -3,6 +3,7 @@ const app = express()
 const employees = require("./routes/employees")
 const salaries = require("./routes/salaries")
 const departments = require("./routes/departments")
+const titles = require("./routes/titles")
 
 const database = require("./mysql/connection")
 
@@ -11,6 +12,7 @@ const port = process.env.PORT || 4001;
 app.use(employees)
 app.use(salaries)
 app.use(departments)
+app.use(titles)
 
 app.get(database)
 

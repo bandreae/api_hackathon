@@ -7,7 +7,7 @@ const mysql = require("mysql2")
 //for every controller that is connected to my database there has to be
 // an errror handling
 
-const getEmployees = (req,res) =>{
+const getEmployees = (req,res) => {
 
   pool.query('SELECT * FROM employees', (err, rows) => {
     if (err) {
